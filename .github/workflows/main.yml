@@ -22,3 +22,4 @@ jobs:
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           docker build -t $DOCKER_USERNAME/posts:latest --build-arg MONGO_URI=${{ secrets.MONGO_URI }} --build-arg PORT={{ secrets.PORT }} --build-arg JWT_SECRET=${{ secrets.JWT_SECRET }} .
           docker push $DOCKER_USERNAME/posts:latest
+ 
